@@ -9,9 +9,9 @@ public class FireSystem : MonoBehaviour
     [SerializeField, Header("buill_speed"), Range(0, 3000)]
     private float firespeed = 500;
 
-    private void Awake()
+    private void Update()
     {
-        FireBullet();
+        if (Input.GetKeyDown(KeyCode.Mouse0)) FireBullet();
     }
 
     private void FireBullet()
