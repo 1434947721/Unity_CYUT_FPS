@@ -319,7 +319,7 @@ GameObject:
   m_Component:
   - component: {fileID: 231768683}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: buill_place
   m_TagString: Untagged
   m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -334,7 +334,7 @@ Transform:
   m_GameObject: {fileID: 231768682}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.99983704, z: -0, w: 0.018054498}
-  m_LocalPosition: {x: 0.000034330413, y: 0.06920004, z: 0.5401407}
+  m_LocalPosition: {x: 0.001, y: 0.065, z: 0.519}
   m_LocalScale: {x: 4.155399, y: 4.1554, z: 4.155399}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -691,6 +691,12 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 26d63c17ee37be94a8dd10d0facf3552, type: 3}
+--- !u!1 &849959588 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: 8b5db024202439f4097acfbbd68fca02,
+    type: 3}
+  m_PrefabInstance: {fileID: 1118020495}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &859713461
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1275,18 +1281,33 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: ea76348a8f65cbe41b46955b4b802505, type: 2}
     - target: {fileID: -4216859302048453862, guid: 8b5db024202439f4097acfbbd68fca02,
         type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.274
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: 8b5db024202439f4097acfbbd68fca02,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.274
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: 8b5db024202439f4097acfbbd68fca02,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.274
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: 8b5db024202439f4097acfbbd68fca02,
+        type: 3}
       propertyPath: m_LocalPosition.x
-      value: 49.23506
+      value: 49.447
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 8b5db024202439f4097acfbbd68fca02,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.53
+      value: 1.136
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 8b5db024202439f4097acfbbd68fca02,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 50.44729
+      value: 49.995
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 8b5db024202439f4097acfbbd68fca02,
         type: 3}
@@ -1351,7 +1372,11 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 231768683}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: -927199367670048503, guid: 8b5db024202439f4097acfbbd68fca02,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1118020497}
   m_SourcePrefab: {fileID: 100100000, guid: 8b5db024202439f4097acfbbd68fca02, type: 3}
 --- !u!4 &1118020496 stripped
 Transform:
@@ -1359,6 +1384,22 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1118020495}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1118020497
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 849959588}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9eb8ea93e528dc44b748e5e5ee5d1f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefabBullet: {fileID: 142025937061634790, guid: 58af84dc12d6638478fd4e7c969cc6bb,
+    type: 3}
+  firepoint: {fileID: 231768683}
+  firespeed: 500
 --- !u!1 &1160234425
 GameObject:
   m_ObjectHideFlags: 0
@@ -1468,6 +1509,10 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: e58bf4525b7cc80459d6f7ff033ea067, type: 2}
+    - target: {fileID: 9500000, guid: 406486edf02d8d74da3b2ca225e21254, type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 13700000, guid: 406486edf02d8d74da3b2ca225e21254, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
