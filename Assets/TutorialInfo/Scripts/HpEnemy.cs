@@ -8,7 +8,8 @@ public class HpEnemy : HpSystem
     {
         if (collision.gameObject.name.Contains(bulletName))
         {
-            Damage(50);
+            float attack = collision.gameObject.GetComponent<Bullet>().attack;
+            Damage(attack);
         }
     }
     protected override void Dead()
