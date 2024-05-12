@@ -11,11 +11,13 @@ public class ESystem : MonoBehaviour
     private Animator ani;
 
     private string parMove = "Move_nb";
-    private string parAttack = "New Trigger";
+    private string parAttack = "atk";
+    private bool isAttacking;
 
     private void Update()
     {
         Move();
+        Attack();
     }
 
     private void Move()
@@ -23,5 +25,16 @@ public class ESystem : MonoBehaviour
         agent.SetDestination(playerPoint.position);
 
         ani.SetFloat(parMove, agent.velocity.magnitude / agent.speed);
+    }
+
+    private void Attack()
+    {
+        if (isAttacking) return;
+
+        if (agent.remainingDistance <= agent.stoppingDistance)
+        {
+            ani.SetTrigger(parAttack);
+            isAttacking = true;
+        }
     }
 }
