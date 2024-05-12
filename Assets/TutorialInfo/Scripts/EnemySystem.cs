@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.AI;
+using System.Collections;
 
 public class ESystem : MonoBehaviour
 {
@@ -9,6 +10,8 @@ public class ESystem : MonoBehaviour
     private NavMeshAgent agent;
     [SerializeField, Header("anime")]
     private Animator ani;
+    [SerializeField, Header("atk_area")]
+    private GameObject attackArea;
 
     private string parMove = "Move_nb";
     private string parAttack = "atk";
@@ -35,6 +38,19 @@ public class ESystem : MonoBehaviour
         {
             ani.SetTrigger(parAttack);
             isAttacking = true;
+            StartCoroutine(StartAttack());
         }
+    }
+
+    private IEnumerator StartAttack() 
+    {
+        print("atk");
+        yield return new WaitForSeconds(0.1f);
+        print("tak");
+        attackArea.SetActive(true);
+        yield return new WaitForSeconds(0.6f);
+        print("kta");
+        attackArea.SetActive(false);
+        isAttacking = false;
     }
 }
